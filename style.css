@@ -70,8 +70,8 @@ img {
     position: absolute;
     left: -10px;
     transition: 0.3s;
-    padding: 15px;
-    width: 100px;
+    padding: 2px;
+    width: 110px;
     font-family: "Comic Sans MS";
     background-image: url('./src/BTN.png');
     background-color: #f44336;
@@ -81,40 +81,55 @@ img {
     text-decoration: none;
     color: black;
     border-radius: 0 5px 5px 0;
+    font-size: 15px;
 }
 
-    #mySidenav a:hover {
-        left: 0;
-    }
+#mySidenav a:hover {
+    left: 0;
+}
 
 #home {
     top: 20px;
-    background-color: #04AA6D;
-    font-size: 15px;
 }
 
 #custom {
-    top: 80px;
-    background-color: #555;
-    font-size: 12px;
+    top: 50px;
 }
 
 #contact {
-    top: 140px;
-    background-color: #555;
-    font-size: 15px;
+    top: 80px;
 }
 
 #all_blasters {
-    top: 200px;
-    background-color: #2196F3;
-    font-size: 15px;
+    top: 110px;
 }
 
 #regulator {
+    top: 140px;
+}
+
+#raptorstrike {
+    top: 170px;
+}
+
+#retaliator {
+    top: 200px;
+}
+
+#spectrum {
+    top: 230px;
+}
+
+#blitzfire {
     top: 260px;
-    background-color: #f44336;
-    font-size: 15px;
+}
+
+#firestrike {
+    top: 290px;
+}
+
+#volt {
+    top: 320px;
 }
 
 .tg {
