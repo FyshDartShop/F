@@ -748,6 +748,16 @@ body {
     z-index: 1
 }
 
+.intro--banner textarea {
+    color: white;
+    background-color: #000000; /* Maintain existing background */
+    border: 1px solid #00884b; /* Optional: add border to match theme */
+    padding: 10px;
+    font-size: 14px; /* Adjust if necessary */
+    max-width: 380px;
+    z-index: 100
+}
+
 .intro--banner button {
     position: relative;
     padding: 5px 5px 5px 12px;

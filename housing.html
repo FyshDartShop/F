@@ -25,11 +25,7 @@
 <!-- Main -->
 <div class="perspective effect-rotate-left">
     <ul class="outer-nav">
-        <li class="is-active">Home</li>
-        <li>Quotes</li>
-        <li>YT-DLP</li>
-        <li>FMP</li>
-        <li>Nav</li>
+        <li class="is-active">Contact Us</li>
     </ul>
 
   <div class="container"><div class="outer-nav--return"></div>
@@ -48,10 +44,6 @@
         <nav class="l-side-nav">
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
-            <li><span>Quotes</span></li>
-            <li><span>YT-DLP</span></li>
-            <li><span>FMP</span></li>
-            <li><span>Nav</span></li>
           </ul>
         </nav>
         <ul class="l-main-content main-content">
@@ -62,29 +54,13 @@
               <div class="intro--banner">
                   <img src="assets/img/Skyline_Render.jpg" alt="Welcome" width="679">
 
-                <button class="cta2">Contact Us
-                  <span class="btn-background"></span>
-                </button>
+                <textarea id="haus" placeholder="'List Price, Contact Info, and Name pls!'" rows="4" cols="40"></textarea>
+
+                <button onclick="sendMessage('haus','https://discord.com/api/webhooks/1336777364390285332/ONQxiGJDt9mD501CdUR26wQkhQrSWho4wTQ-8U7atWYGCpbQ0FSgOuXrGQ-Or4LPtSpR')">Send Message <span class="btn-background"></span></button>
 
               </div>
             </div>
           </li>
-
-
-          <!-- Main Articles -->
-            <li class="l-section section">
-              <div class="about">
-                <div class="about--banner">
-                  <img src="assets/img/maomao.PNG" alt="maomao.PNG" height="400" style="position: absolute; left: 470px; top: 125px;">
-                  <h1>Housing</h1>
-                  <hr>
-                  <textarea id="haus" placeholder="'List Price, Contact Info, and Name pls!'" rows="4" cols="40"></textarea>
-                  <br>
-                  <button onclick="sendMessage('haus','https://discord.com/api/webhooks/1336777364390285332/ONQxiGJDt9mD501CdUR26wQkhQrSWho4wTQ-8U7atWYGCpbQ0FSgOuXrGQ-Or4LPtSpR')">Send</button>
-                </div>
-              </div>
-            </li>
-
 
 
 
@@ -135,74 +111,6 @@
   }
 </script>
 
-<script>
-  function sendMessageDL(m_ID,webhookURL) {
-    var userMessage = document.getElementById(m_ID).value;
-    if (!userMessage) {
-      alert("Y u no write anything? Violators must be punished.");
-      window.open("ricky.html", "_blank");
-      return;
-    }
-
-    var request = new XMLHttpRequest();
-    request.open("POST", webhookURL);
-
-    request.setRequestHeader('Content-type', 'application/json');
-
-    var fullMessage = `dl ${userMessage}`;
-
-    var params = {
-      username: "Yarr",
-      avatar_url: "",
-      content: fullMessage
-    }
-    request.send(JSON.stringify(params));
-
-    document.getElementById(m_ID).value = "";
-  }
-</script>
-
-<script>
-  const apiKey = 'AIzaSyDMIWJiZiB8tc-WBZNEGVRVaRk7OJOE-Bc';
-  const maxResults = 1;
-
-  async function fetchLatestVideo(channelId, container) {
-      const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}&hl=fr`;
-
-      try {
-          const response = await fetch(url);
-          const data = await response.json();
-
-          if (data.items && data.items.length > 0) {
-              const videoId = data.items[0].id.videoId;
-              const embedHtml = `
-                  <iframe width="280" height="156"
-                          src="https://www.youtube.com/embed/${videoId}?controls=1&modestbranding=1&rel=0"
-                          title="YouTube video player" frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                          allowfullscreen>
-                  </iframe>`;
-              container.innerHTML = embedHtml;
-
-          } else {
-              container.innerHTML = 'Panik.';
-          }
-      } catch (error) {
-          console.error('Error fetching video:', error);
-          container.innerHTML = 'Error loading video.';
-      }
-  }
-
-  // Get all video containers
-  const videoContainers = document.querySelectorAll('.video-container');
-
-  videoContainers.forEach(container => {
-      const channelId = container.dataset.channelId;
-      fetchLatestVideo(channelId, container);
-  });
-
-  </script>
-
 
   <script>
       async function sendToWebhook(m_ID, webhookURL) {
@@ -243,8 +151,6 @@
           }
       }
   </script>
-
-
 
 
 </body>
