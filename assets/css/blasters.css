@@ -117,8 +117,8 @@ table tr:nth-child(even) td {
 
 .side-nav-toggle {
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 24px;
+    left: 110px;
     font-size: 24px;
     color: #70e2d9;
     cursor: pointer;

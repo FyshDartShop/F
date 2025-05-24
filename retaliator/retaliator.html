@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        FyshDart Store
-    </title>
-    <link rel="icon" href="src/fysh_logo_ico.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-
+  <title>Fysh Dart Shop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="../assets/img/fysh.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../assets/img/fysh.png">
+  <link rel="stylesheet" href="../assets/css/blasters.css">
+  <script src="../assets/js/blasters.js"></script>
 </head>
-<body style="background-color: rgb(1, 16, 58);">
-    <div id="mySidenav" class="sidenav">
-        <a href="index.html" ; id="home">Home</a>
-        <a href="custom.html" id="custom">Custom</a>
-        <a href="contact.html" id="contact">Buy</a>
 
-        <a href="all_blasters.html" id="all_blasters">All Blasters</a>
-        <a href="regulator.html" id="regulator">Regulator</a>
-        <a href="raptorstrike.html" id="raptorstrike">Raptorstrike</a>
-        <a href="retaliator.html" id="retaliator">Retaliator</a>
-        <a href="spectrum.html" id="spectrum">Spectrum</a>
+<header class="blaster-header">
+  <a href="../index.html" class="blaster-home-link">
+    <img src="../assets/img/logo.png" alt="Fysh Logo" class="blaster-logo">
+    <span class="blaster-home-text">MENU</span>
+  </a>
+  <a href="../index.html?section=springers" class="blaster-series-label">Springer Blasters</a>
 
-        <a href="blitzfire.html" id="blitzfire">Blitzfire</a>
-        <a href="firestrike.html" id="firestrike">Firestrike</a>
-        <a href="volt.html" id="volt">Volt</a>
+<div class="side-nav-toggle" onclick="toggleSideMenu()">☰</div>
 
-    </div>
+<nav id="sideMenu" class="side-nav-menu">
+  <ul id="sideMenuList"></ul>
+</nav>
+</header>
 
+
+
+<div class="intro--options" id="blasterMenu"></div>
+
+<body>
+  
+
+
+      
+      <hr>
 
     <h1><em>Elite Series</em></h1>
     <h2>Retaliator</h2>
     <h3>
         Full Upgrades<br>
-        <img src="img\retaliator.jpg" alt="Springer, Bolt Action">
+        <img src="retaliator.jpg" alt="Springer, Bolt Action" width="700px">
         <br>
-        <img src="img\retaliator_fps.jpg" alt="Springer, Bolt Action">
+        <img src="retaliator_fps.jpg" alt="Springer, Bolt Action" width="700px">
     </h3>
 
     <h4>$100 Custom, Original $300</h4>
@@ -47,6 +52,21 @@
         Springer, Bolt Action
     </h5>
 
-
 </body>
 </html>
+
+
+<script>
+fetch('../blasters.txt')
+  .then(response => response.text())
+  .then(text => {
+    const menuDiv = document.getElementById('blasterMenu');
+    text.trim().split('\n').forEach(line => {
+      const [path, label] = line.split('|');
+      const a = document.createElement('a');
+      a.href = path.trim();
+      a.textContent = label.trim();
+      menuDiv.appendChild(a);
+    });
+  });
+</script>
