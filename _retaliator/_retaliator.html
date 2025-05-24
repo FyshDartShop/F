@@ -10,9 +10,21 @@
   <link rel="stylesheet" href="../assets/css/blasters.css">
 </head>
 
+<header class="blaster-header">
+  <a href="../index.html" class="blaster-home-link">
+    <img src="../assets/img/logo.png" alt="Fysh Logo" class="blaster-logo">
+    <span class="blaster-home-text">HOME</span>
+  </a>
+  <a href="../index.html?section=springers" class="blaster-series-label">Springer Blasters</a>
+</header>
+
+
+
+<div class="intro--options" id="blasterMenu"></div>
+
 <body>
 
-      <h1>Springer Blasters</h1>
+      
       <hr>
 
     <h1><em>Elite Series</em></h1>
@@ -33,3 +45,19 @@
 
 </body>
 </html>
+
+
+<script>
+fetch('../blasters.txt')
+  .then(response => response.text())
+  .then(text => {
+    const menuDiv = document.getElementById('blasterMenu');
+    text.trim().split('\n').forEach(line => {
+      const [path, label] = line.split('|');
+      const a = document.createElement('a');
+      a.href = path.trim();
+      a.textContent = label.trim();
+      menuDiv.appendChild(a);
+    });
+  });
+</script>
