@@ -1,14 +1,14 @@
-retaliator/retaliator.html|313 (Retaliator)
-regulator/regulator.html|Regulator
-spectrum/spectrum.html|Spectrum
-raptorstrike/raptorstrike.html|Raptorstrike
-blitzfire/blitzfire.html|Blitzfire
-firestrike/firestrike.html|Firestrike
-ECS10/ECS10.html|FSSR (ECS-10)
-reaper/reaper.html|Reaper (Ultra-Tek)
-snipe/snipe.html|Snipe (Ultra-Tek)
-mosin/mosin.html|F717 (Predator)
-obrez/obrez.html|Obrez (Predator)
-recon/recon.html|Alex (Recon CS-6)
-volt/volt.html|Volt
-ashworth/ashworth.html|Ashworth Project
+/F/retaliator/retaliator.html|313 (Retaliator)
+/F/regulator/regulator.html|Regulator
+/F/spectrum/spectrum.html|Spectrum
+/F/raptorstrike/raptorstrike.html|Raptorstrike
+/F/blitzfire/blitzfire.html|Blitzfire
+/F/firestrike/firestrike.html|Firestrike
+/F/ECS10/ECS10.html|FSSR (ECS-10)
+/F/reaper/reaper.html|Reaper (Ultra-Tek)
+/F/snipe/snipe.html|Snipe (Ultra-Tek)
+/F/mosin/mosin.html|F717 (Predator)
+/F/obrez/obrez.html|Obrez (Predator)
+/F/recon/recon.html|Alex (Recon CS-6)
+/F/volt/volt.html|Volt
+/F/ashworth/ashworth.html|Ashworth Project
