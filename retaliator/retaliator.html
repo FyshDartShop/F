@@ -8,59 +8,43 @@
   <link rel="icon" href="../assets/img/fysh.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="../assets/img/fysh.png">
   <link rel="stylesheet" href="../assets/css/blasters.css">
-  <script src="../assets/js/blasters.js"></script>
 </head>
 
-<header class="blaster-header">
-  <a href="../index.html" class="blaster-home-link">
-    <img src="../assets/img/logo.png" alt="Fysh Logo" class="blaster-logo">
-    <span class="blaster-home-text">MENU</span>
-  </a>
-  <a href="../index.html?section=springers" class="blaster-series-label">Springer Blasters</a>
-
-<div class="side-nav-toggle" onclick="toggleSideMenu()">☰</div>
-
-<nav id="sideMenu" class="side-nav-menu">
-  <ul id="sideMenuList"></ul>
-</nav>
-</header>
-
-
-
-<div class="intro--options" id="blasterMenu"></div>
-
 <body>
-    <h1><em>Elite Series</em></h1>
-    <h2>Retaliator</h2>
-    <h3>
-        Full Upgrades<br>
-        <img src="retaliator.jpg" alt="Springer, Bolt Action" width="700px">
-        <br>
-        <img src="retaliator_fps.jpg" alt="Springer, Bolt Action" width="700px">
-    </h3>
 
-    <h4>$100 Custom, Original $300</h4>
-    <h5>
-        Overview:
-        <br>
-        Springer, Bolt Action
-    </h5>
+  <!-- HEADER & MENU -->
+  <header class="blaster-header">
+    <a href="../index.html" class="blaster-home-link">
+      <img src="../assets/img/logo.png" alt="Fysh Logo" class="blaster-logo">
+      <span class="blaster-home-text">MENU</span>
+    </a>
+    <a href="../index.html?section=springers" class="blaster-series-label">Springer Blasters</a>
 
+    <div class="side-nav-toggle" onclick="toggleSideMenu()">☰</div>
+
+    <nav id="sideMenu" class="side-nav-menu">
+      <ul id="sideMenuList"></ul>
+    </nav>
+  </header>
+
+  <!-- Blaster Stuffs-->
+  <div class="intro--options" id="blasterMenu"></div>
+
+  <h1><em>Elite Series</em></h1>
+  <h2>Retaliator</h2>
+  <h3>
+    Full Upgrades<br>
+    <img src="retaliator.jpg" alt="Springer, Bolt Action" width="700px"><br>
+    <img src="retaliator_fps.jpg" alt="Springer, Bolt Action" width="700px">
+  </h3>
+
+  <h4>$100 Custom, Original $300</h4>
+  <h5>
+    Overview:
+    <br>
+    Springer, Bolt Action
+  </h5>
+
+  <script src="../assets/js/blasters.js"></script>
 </body>
 </html>
-
-
-<script>
-fetch('../blasters.txt')
-  .then(response => response.text())
-  .then(text => {
-    const menuDiv = document.getElementById('blasterMenu');
-    text.trim().split('\n').forEach(line => {
-      const [path, label] = line.split('|');
-      const a = document.createElement('a');
-      a.href = path.trim();
-      a.textContent = label.trim();
-      menuDiv.appendChild(a);
-    });
-  });
-</script>
