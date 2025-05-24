@@ -1,15 +1,13 @@
 function toggleSideMenu() {
   const menu = document.getElementById("sideMenu");
-  menu.style.left = menu.style.left === "0px" ? "-250px" : "0px";
+  menu.classList.toggle("show");
 }
 
 fetch('../blasters.txt')
-  .then(res => {
-    if (!res.ok) throw new Error("blasters.txt not found");
-    return res.text();
-  })
+  .then(res => res.text())
   .then(text => {
     const list = document.getElementById("sideMenuList");
+    list.innerHTML = ""; // clear existing
     text.trim().split("\n").forEach(line => {
       const [url, label] = line.split("|");
       if (!url || !label) return;
@@ -21,4 +19,4 @@ fetch('../blasters.txt')
       list.appendChild(li);
     });
   })
-  .catch(err => console.error("Error loading menu:", err));
+  .catch(err => console.error("Sidebar fetch failed:", err));
