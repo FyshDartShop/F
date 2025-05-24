@@ -125,6 +125,14 @@ table tr:nth-child(even) td {
     z-index: 1001;
 }
 
+#sideMenuList {
+    display: none;
+}
+
+.side-nav-menu.show #sideMenuList {
+    display: block;
+}
+
 .side-nav-menu {
     position: fixed;
     top: 0;
@@ -137,6 +145,7 @@ table tr:nth-child(even) td {
     padding: 20px;
     transition: left 0.3s ease;
     z-index: 1000;
+    padding-top: 60px;
 }
 
 .side-nav-menu ul {
