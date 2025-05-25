@@ -1384,7 +1384,8 @@ button img.btn-img {
     }
 
     .about--banner img {
-        display: none
+        width: 100px;
+        height: auto;
     }
 
     .about--options {
