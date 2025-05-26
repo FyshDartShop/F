@@ -877,13 +877,20 @@ body {
     }
 
     .intro--options {
-        display: block
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1px;
+        padding-top: 30px;
     }
 
-    .intro--options>a {
-        display: block;
-        max-width: 100%;
-        margin: 0 0 30px 0
+    .intro--options > a {
+        display: inline-block;
+        font-size: 8px;
+        padding: 1px 5px;
+        color: #ccc;
+        max-width: 120px;
+        word-break: break-word;
     }
 
     .intro--options>a:last-child {
@@ -898,6 +905,28 @@ body {
 
     .intro--banner h1 {
         font-size: 55px
+    }
+
+    .intro--banner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro--options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1px;
+        padding-top: 1px;
+    }
+
+    .intro--options > a {
+        display: inline-block;
+        font-size: 8px;
+        padding: 1px 5px;
+        color: #ccc;
+        max-width: 120px;
+        word-break: break-word;
     }
 
     .intro--banner img {
@@ -916,12 +945,26 @@ body {
     }
 
     .intro--banner h1 {
-        margin-top: 0
+        margin-top: 140px;
     }
 
     .intro--options {
-        display: none
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1px;
+        padding-top: 1px;
     }
+
+    .intro--options > a {
+        display: inline-block;
+        font-size: 8px;
+        padding: 1px 5px;
+        color: #ccc;
+        max-width: 120px;
+        word-break: break-word;
+    }
+
 }
 
 .work {
@@ -1383,10 +1426,16 @@ button img.btn-img {
         left: 205px
     }
 
-    .about--banner img {
-        width: 100px;
-        height: auto;
-    }
+  .about--banner img {
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: static;
+  }
+
 
     .about--options {
         display: none
