@@ -6,9 +6,8 @@
 /F/firestrike/firestrike.html|Firestrike
 /F/ECS10/ECS10.html|FSSR (ECS-10)
 /F/reaper/reaper.html|Reaper (Ultra-Tek)
-/F/snipe/snipe.html|Snipe (Ultra-Tek)
+/F/snipe/snipe.html|Wonky (Snipe)
 /F/mosin/mosin.html|F717 (Predator)
-/F/obrez/obrez.html|Obrez (Predator)
-/F/recon/recon.html|Alex (Recon CS-6)
+/F/mosin/mosin.html|Obrez (Predator)
 /F/volt/volt.html|Volt
-/F/ashworth/ashworth.html|Ashworth Project
+/F/thermal_hunter/thermal_hunter.html|Thermal Hunter

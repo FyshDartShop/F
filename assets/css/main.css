@@ -1394,7 +1394,13 @@ button img.btn-img {
     }
 
     .about--banner img {
-        width: 315px
+        height: auto;
+        max-height: 150px;
+        width: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        position: static;
     }
 }
 
